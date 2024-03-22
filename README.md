@@ -7,7 +7,7 @@ Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
 * João Pedro Gomes da Silva
 * Higor Antônio da Silva
 * Pedro Augusto Cruz de Almeida
-* Nome completo do aluno 4
+* Alex Mendes dos Santos
 
 ## Professores responsáveis
 
