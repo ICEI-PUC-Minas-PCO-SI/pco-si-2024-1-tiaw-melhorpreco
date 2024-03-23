@@ -9,6 +9,8 @@ Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
 * Pedro Augusto Cruz de Almeida
 * Alex Mendes dos Santos
 * Ramon Pereira de Souza
+* Phillipi Garcia da Silveira
+* Arthur Leandro Jacinto 
 
 ## Professores responsáveis
 
