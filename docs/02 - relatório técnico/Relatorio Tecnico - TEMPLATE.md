@@ -2,15 +2,21 @@
 # Informações do Projeto
 `TÍTULO DO PROJETO`  
 
-......  COLOQUE AQUI O SEU TEXTO ......
+......  MELHOR PREÇO ......
 
 `CURSO` 
 
-......  COLOQUE AQUI O SEU TEXTO ......
+......  SISTEMAS DE INFORMAÇÃO ......
 
 ## Participantes
 
-......  COLOQUE AQUI O SEU TEXTO ......
+......  * João Pedro Gomes da Silva
+* Higor Antônio da Silva
+* Pedro Augusto Cruz de Almeida
+* Alex Mendes dos Santos
+* Ramon Pereira de Souza
+* Phillipi Garcia da Silveira
+* Arthur Leandro Jacinto  ......
 
 > Inclua a lista dos membros da equipe com seus nomes completos.
 >
@@ -57,7 +63,7 @@
 
 ## Problema
 
-......  COLOQUE AQUI O SEU TEXTO ......
+......  No contexto atual, os consumidores estão constantemente em busca do melhor custo-benefício na hora de adquirir produtos. No entanto, a tarefa de comparar preços entre diferentes estabelecimentos pode ser bastante trabalhosa e demorada. Nesse sentido, surge a necessidade de uma aplicação que simplifique esse processo, permitindo aos usuários encontrar rapidamente o menor preço de um determinado produto. ......
 
 > Nesse momento você deve apresentar o problema que a sua aplicação deve
 > resolver. No entanto, não é a hora de comentar sobre a aplicação.
@@ -77,7 +83,10 @@
 
 ## Objetivos
 
-......  COLOQUE AQUI O SEU TEXTO ......
+......  O objetivo geral deste trabalho é desenvolver uma aplicação web que possibilite aos usuários encontrar o menor preço de um produto específico de forma rápida e eficiente. Para alcançar esse objetivo, destacam-se os seguintes objetivos específicos:
+
+1-Implementar um sistema de busca que permita aos usuários pesquisar produtos por nome ou categoria.
+2-Integrar a aplicação com bases de dados de diferentes estabelecimentos para coletar informações de preços em tempo real. ......
 
 > Aqui você deve descrever os objetivos do trabalho indicando que o
 > objetivo geral é desenvolver um software para solucionar o problema
@@ -90,7 +99,7 @@
 
 ## Justificativa
 
-......  COLOQUE AQUI O SEU TEXTO ......
+......  A importância de desenvolver uma aplicação como a proposta reside na otimização do processo de compra para os consumidores. Ao facilitar a comparação de preços, a aplicação contribui para que os usuários possam fazer escolhas mais conscientes, economizando tempo e dinheiro. Além disso, a aplicação pode ser uma ferramenta valiosa para os estabelecimentos comerciais, permitindo-lhes alcançar um público mais amplo e competitivo. ......
 
 > Descreva a importância ou a motivação para trabalhar com esta aplicação
 > que você escolheu. Indique as razões pelas quais você escolheu seus
@@ -106,7 +115,12 @@
 
 ## Público-Alvo
 
-......  COLOQUE AQUI O SEU TEXTO ......
+......  O público-alvo da aplicação é diversificado e inclui:
+
+-Consumidores em geral que desejam economizar tempo na busca pelo melhor preço.
+-Estabelecimentos comerciais interessados em atrair clientes através da exposição de seus produtos com preços competitivos.
+-Usuários com diferentes níveis de familiaridade com tecnologia, desde iniciantes até experientes.
+Por meio da criação de personas e da análise de stakeholders, será possível compreender melhor as necessidades e expectativas desses diferentes perfis de usuários. ......
 
 > Descreva quem serão as pessoas que usarão a sua aplicação indicando os
 > diferentes perfis. O objetivo aqui não é definir quem serão os
