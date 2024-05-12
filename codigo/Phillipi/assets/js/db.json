@@ -1,0 +1,24 @@
+{
+    "produtos": [
+      {
+        "id": 1,
+        "titulo": "Appie iPhone 14 128GB",
+        "imagem": "../assets/images/Appie iPhone 14 128GB.jpg",
+        "descricao": "Appie iPhone 14 128GB, Memória RAM: 4 GB Ecrã Super Retina XDR de 6,1 polegadas. (1) Sistema de câmera avançado para tirar fotos melhores em qualquer condição de luz Modo Cinema agora em 4K Dolby Vision de até 30 cps. Modo de ação para vídeos estáveis, mesmo com a câmera na mão. Crash Detection (2), um recurso de segurança que pede ajuda quando você não pode. Bateria para todo o dia e até 26 horas de reprodução de vídeo. (3) A15 Bionic, com GPU de 5 núcleos para desempenho excepcional. Rede 5G ultrarrápida. (4) Escudo cerâmico e resistência à água, características de durabilidade líderes do setor. (5) O iOS 16 oferece ainda mais opções de personalização e mais formas de se comunicar e compartilhar. (6)",
+        "preco":"3.950,10"
+      },
+      {
+        "id": 2,
+        "titulo": "TV Philco 32'' HD",
+        "imagem": "../assets/images/TV Philco 32 HD.jpg",
+        "descricao": "Tamanho da tela: 32  Sua resolução é HD. Modo de som: Dolby Audio. Sistema operacional Android TV. Conecta teus dispositivos por meio de seus 2 portas USB. Dimensões: 71.5cm de largura, 42.2cm de alto, 5.7cm de profundidade. Entretenimento e conectividade em um único dispositivo. Possui entrada de vídeo e áudio estéreo (RCA) Conta com HDR que incorpora um contraste aprimorado entre tons claros e escuros, e uma nitidez impressionante",
+        "preco":"1.518,00"
+      },
+      {
+        "id": 3,
+        "titulo":"Playstation 5 Sony Sllim SSD 1TB",
+        "imagem": "../assets/images/Playstation 5 Sony Sllim SSD 1TB.jpg",
+        "descricao":"O que você precisa saber sobre este produto Capacidade: 825 GB Inclui controle. Resolução de 3840px x 2160px. Memória RAM de 16GB. Conta com: 1 cabo hdmi.",
+        "preco":"3.609,90"
+      }]
+}

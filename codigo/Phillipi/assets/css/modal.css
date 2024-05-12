@@ -1,0 +1,58 @@
+/* modal.css */
+
+.modal {
+    display: none; /* Escondido por padrão */
+    position: absolute; /* Fique em posição fixa para cobrir toda a janela */
+    z-index: 1; /* Fique no topo */
+    left: 0;
+    top: 0;
+    width: 28%; /* Largura total */
+    height: 40%; /* Altura total */
+    overflow: auto; /* Adicione rolagem se necessário */
+    background-color: rgba(0, 0, 0, 0.078); /* Cor de fundo preta com transparência */
+}
+
+
+/* Botão de fechar */
+.close {
+    color: #ff0000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.banner-image {
+    max-width: 100%; /* Garante que a imagem não ultrapasse o limite do conteúdo do modal */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove qualquer espaço extra ao redor da imagem */
+    margin-bottom: 20px; /* Adiciona um espaço entre a imagem e o parágrafo de texto */
+}
+.notification-message {
+    display: flex; /* Use flexbox para alinhar a imagem e o texto horizontalmente */
+    align-items: center; /* Centralize verticalmente */
+}
+
+.notification-icon {
+    width: 20px; /* Defina o tamanho da imagem de notificação */
+    height: 20px;
+    margin-right: 5px; /* Adicione um espaço entre a imagem de notificação e o texto */
+    display: flex;
+}
+
+.notification-text {
+    font-size: 1em; /* Defina o tamanho da fonte em relação ao tamanho padrão do navegador */
+    font-family: Arial, sans-serif;
+}
+.notification-message p {
+    display: flex; /* Oculta a mensagem de notificação inicialmente */
+}
+.modal.active .clear-notification {
+    display: inline-block;
+}

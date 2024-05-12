@@ -1,0 +1,70 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #ffe600;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 50px;
+    width: 100px;
+}
+
+.search {
+    display: flex;
+}
+
+.search input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    width: 300px;
+}
+
+.search button {
+    background-color: #c7c7c7;
+    color: #0c0c0c;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.notif-button button {
+    display: flex;
+    width: 20px; /* Defina o tamanho desejado para a largura do botão */
+    height: 20px; /* Defina o tamanho desejado para a altura do botão */
+    overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse os limites do botão */
+    background-color: #ffe600;
+    border: none;
+    padding: 0;
+}
+
+.notif-button button img {
+    width: 100%; /* Redimensiona a largura da imagem para preencher o botão */
+    height: 100%; /* Redimensiona a altura da imagem para preencher o botão */
+    object-fit: cover; /* Redimensiona a imagem mantendo a proporção e cortando o excesso */
+    object-position: center; /* Posiciona a imagem centralizada no botão */
+}
+
+
+.user-options {
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.user-options a {
+    color: #333;
+    text-decoration: none;
+}
+
