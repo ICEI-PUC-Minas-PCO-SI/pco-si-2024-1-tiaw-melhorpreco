@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TELA DE BUSCA</title>
+    <link rel="stylesheet" href="/assents/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer src="/assents/js/app.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <section class="header">
+    <header>
+        <div class="logo">
+            <img src="/assents/images/logo.png" alt="Logo">
+        </div>
+    
+        <div class="search">
+            <input type="text" placeholder="Buscar">
+            <button type="submit">Buscar</button>
+        </div>
+       
+    </header></section>
+</section>
+
+<section class="filtro">
+    <form class="d-flex">
+    <select id ="filtroMarca" class="form-control me-2" name="marca">
+        <option value="0">Marca</option>
+        <option value="1">Apple</option>
+        <option value="2">Samsung</option>
+        <option value="3">Xiaomi</option>
+        <option value="4">Motorola</option>
+        <option value="5">Multilaser</option>
+    </select>
+    </form>
+    <form class="d-flex">
+        <select id="filtroPreco" class="form-control me-2" name="preco">
+            <option value="0">Preços</option>
+            <option value="440">Acima de R$440</option>
+            <option value="1250">Acima de R$1250</option>
+            <option value="1820">Acima de R$1820</option>
+            <option value="2650">Acima de R$2650</option>
+        </select>
+        </form>
+        <form class="d-flex">
+            <select id ="filtroRate" class="form-control me-2" name="rate">
+                <option value="0">Avaliação</option>
+                <option value="1">Acima de 1</option>
+                <option value="2">Acima de 2</option>
+                <option value="3">Acima de 3</option>
+                <option value="4">Acima de 4</option>
+            </select>
+            </form>
+</section>
+
+<Section class="products">
+<div class="gallery" id="tela">
+
+    <div class="content">
+        <img class="produto" src="https://i.zst.com.br/thumbs/45/18/11/-845265318.jpg" alt="produto">
+        <span>Smartphone Apple</span><h3>Iphone 14</h3>
+        <h6>R$3.889,000</h6>
+        
+        <ul>
+            
+            <li><i class="fa fa-star checked"></i></li>
+            <li><i class="fa fa-star checked"></i></li>
+            <li><i class="fa fa-star checked"></i></li>
+            <li><i class="fa fa-star checked"></i></li>
+            <li><i class="fa fa-star"></i></li>
+        </ul>
+        <button class="buy-1 button-produto">Buy Now</button>
+    </div>
+
+    <div class="content">
+        <img class="produto" src="https://i.zst.com.br/thumbs/45/32/15/-1110274597.jpg" alt="produto">
+        <span>Smartphone Motorola</span><h3>Moto G84</h3>
+        <h6>R$1.343,25</h6>
+        <ul>
+            <li><i class="fa fa-star checked"></i></li>
+            <li><i class="fa fa-star checked"></i></li>
+            <li><i class="fa fa-star checked"></i></li>
+            <li><i class="fa fa-star"></i></li>
+            <li><i class="fa fa-star"></i></li>
+        </ul>
+        <button class="buy-1 button-produto">Buy Now</button>
+    </div>
+
+    <div class="content">
+        <img class="produto" src="https://i.zst.com.br/thumbs/45/8/3a/-1138249032.jpg" alt="produto">
+        <span>Smartphone Xiaomi</span><h3>Redmi 12</h3>
+        <h6>R$898,000</h6>
+        <ul>
+            <li><i class="fa fa-star checked"></i></li>
+            <li><i class="fa fa-star checked"></i></li>
+            <li><i class="fa fa-star"></i></li>
+            <li><i class="fa fa-star"></i></li>
+            <li><i class="fa fa-star"></i></li>
+        </ul>
+        <button class="buy-1 button-produto">Buy Now</button>
+    </div>
+
+    <div class="content">
+        <img class="produto" src="https://i.zst.com.br/thumbs/12/12/38/-949888442.jpg" alt="produto">
+        <span>Smartphone Samsung</span><h3>Galaxy S23</h3>
+        <h6>R$2.899,000</h6>
+        <ul>
+            <li><i class="fa fa-star checked"></i></li>
+            <li><i class="fa fa-star checked"></i></li>
+            <li><i class="fa fa-star checked"></i></li>
+            <li><i class="fa fa-star checked"></i></li>
+            <li><i class="fa fa-star"></i></li>
+        </ul>
+        <button class="buy-1 button-produto">Buy Now</button>
+    </div>
+
+    <div class="content">
+        <img class="produto" src="https://i.zst.com.br/thumbs/12/12/1a/-52978684.jpg" alt="produto">
+        <span>Smartphone Multilaser </span><h3>G Max 2</h3>
+        <h6>R$434,90</h6>
+        <ul>
+            <li><i class="fa fa-star checked"></i></li>
+            <li><i class="fa fa-star checked"></i></li>
+            <li><i class="fa fa-star"></i></li>
+            <li><i class="fa fa-star"></i></li>
+            <li><i class="fa fa-star"></i></li>
+        </ul>
+        <button class="buy-1 button-produto">Buy Now</button>
+    </div>
+    <div class="content">
+        <img class="produto" src="https://i.zst.com.br/thumbs/12/3/14/-781796560.jpg" alt="produto">
+        <span>Smartphone Multilaser </span><h3>F Max 2</h3>
+        <h6>R$1000,000</h6>
+        <ul>
+            <li><i class="fa fa-star checked"></i></li>
+            <li><i class="fa fa-star checked"></i></li>
+            <li><i class="fa fa-star"></i></li>
+            <li><i class="fa fa-star"></i></li>
+            <li><i class="fa fa-star"></i></li>
+        </ul>
+        <button class="buy-1 button-produto">Buy Now</button>
+    </div>
+    <div class="content">
+        <img class="produto" src="https://i.zst.com.br/thumbs/45/a/13/-1114650735.jpg" alt="produto">
+        <span>Smartphone Apple</span><h3>Iphone 15 Pro Max</h3>
+        <h6>R$7.599,000</h6>
+        <ul>
+            <li><i class="fa fa-star checked"></i></li>
+            <li><i class="fa fa-star checked"></i></li>
+            <li><i class="fa fa-star checked"></i></li>
+            <li><i class="fa fa-star checked"></i></li>
+            <li><i class="fa fa-star"></i></li>
+        </ul>
+        <button class="buy-1 button-produto">Buy Now</button>
+    </div>
+    <div class="content">
+        <img class="produto" src="https://i.zst.com.br/thumbs/12/36/39/-1119443966.jpg" alt="produto">
+        <span>Smartphone Motorola</span><h3>Moto G54</h3>
+        <h6>R$1.078,25</h6>
+        <ul>
+            <li><i class="fa fa-star checked"></i></li>
+            <li><i class="fa fa-star checked"></i></li>
+            <li><i class="fa fa-star checked"></i></li>
+            <li><i class="fa fa-star"></i></li>
+            <li><i class="fa fa-star"></i></li>
+        </ul>
+        <button class="buy-1 button-produto">Buy Now</button>
+    </div>
+</div>
+</Section>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
