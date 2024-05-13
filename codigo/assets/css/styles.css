@@ -45,3 +45,15 @@ header {
     text-decoration: none;
     margin-left: 10px;
 }
+
+#nome-produto{
+    cursor: pointer;
+}
+
+h1 {
+    cursor: pointer;
+}
+
+img {
+    cursor: pointer;
+}
