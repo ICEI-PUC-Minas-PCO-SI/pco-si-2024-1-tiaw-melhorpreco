@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>priceCheck - Sugestões</title>
+    <link rel="stylesheet" href="assets/css/telasugestoes.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="html" href="index.html">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/img/logosemfundo.png" alt="Logo da empresa">
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Buscar">
+            <button type="submit"><a href="redirect.html">Buscar</a></button>
+        </div>
+        <div class="user-options">
+            <a href="redirect.html">Login</a> |<a href="redirect.html">Cadastro</a>
+        </div>
+
+
+    </header>
+    <main>
+        <div class="texto">
+            <h1 id="titulo"> Reclamações e Sugestões</h1>
+            <p>Nos envie uma sugestão ou uma reclamação! </p>
+            <p id="p2">Seu feedback é sempre importante!</p>
+        </div>
+        <div class="feedback">
+            <img src="assets/img/feedback.png" alt="Imagem de feedback">
+        </div>
+        <form class="formulario">
+            <label for="texto1">Seu nome:</label>
+            <br>
+            <input type="text" placeholder="Daniel Almeida" id="texto1" name="texto1" required = true>
+            <br>
+            <label for="texto2">Seu e-mail:</label>
+            <br>
+            <input type="text" placeholder="danielalmeidadad@email" id="texto2" name="texto2" required = true>
+            <br>
+            <label for="texto3">Sua sugestão/reclamação:</label>
+            <br>
+            <textarea type="text" placeholder="Minha sugestão é..." id="texto3" name="texto3" required = true></textarea>
+            <br>
+    </main>
+    <article>
+        <button id="envio">ENVIAR</button>
+    </article>
+
+    <footer>
+        <p id="rodape">priceCheck - 2024. Todos os direitos reservados</p>
+    </footer>
+    <script src="assets/js/sugestoes.js"> </script>
+</body>
+
+</html>
