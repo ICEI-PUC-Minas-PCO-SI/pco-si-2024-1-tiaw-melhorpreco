@@ -83,3 +83,12 @@ td .preco-produto-1 {
 .price-2 {
     color: green;
 }
+
+.btn-repo {
+    background-color: #c7c7c7;
+    color: #0c0c0c;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px 5px 5px 5px;
+    cursor: pointer;
+}
