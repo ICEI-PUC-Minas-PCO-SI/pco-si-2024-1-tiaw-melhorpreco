@@ -7,8 +7,9 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+//foi necessário coloar a rota de onde está rodando o Node, pois a porta que está rodando o html é diferente.
 function buscarProduto(buscaDigitada) {
-    fetch("/getIten")
+    fetch(`http://localhost:3000/getIten?busca=${encodeURIComponent(buscaDigitada)}`)
       .then(response => response.json())
       .then(data => {
           console.log('Produtos encontrados:', data);
@@ -19,9 +20,8 @@ function buscarProduto(buscaDigitada) {
 
 
 
-
 function lerProdutos() {
-    fetch('../assets/json/db.json') // Corrija o caminho para o arquivo JSON
+    fetch('../assets/json/db.json') 
       .then(response => response.json())
       .then(data => preencherListaProdutos(data.results))
       .catch(error => console.error(error));

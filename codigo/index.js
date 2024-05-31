@@ -4,7 +4,7 @@ const path = require('path');
 const fetch = require('node-fetch');
 
 //Indica onde está os arquivos estáticos
-app.use(express.static(path.join(__dirname,'Pedro')));
+app.use(express.static(path.join(__dirname,'Higor')));
 
 app.post('/test',async (req, res) =>{
     // Variaveis que vamos precisar enviar à API do MELI
@@ -76,10 +76,10 @@ const fs = require('fs');
 
 app.get('/getIten',async (req, res) =>{
     // Variaveis que vamos precisar enviar à API do MELI
-    const access_token = "APP_USR-6601762389710091-053010-98a094327540baf2151693a1e1934527-174492932";
+    const access_token = "APP_USR-6601762389710091-053109-86efbb14ff7d7de4bd4866d41b371824-174492932";
 
     
-    const buscaDigitada = "motorola"; // Busca o parâmetro de busca na query da URL
+    const buscaDigitada = req.query.busca || "motorola"; // Busca o parâmetro de busca na query da URL
 
      //Informações que vão ser enviadas junto da URL principal da requisição/chamada
      const headers = {
