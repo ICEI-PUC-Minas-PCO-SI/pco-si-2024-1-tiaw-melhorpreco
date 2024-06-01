@@ -28,27 +28,59 @@ function lerProdutos() {
 }
 
 function preencherListaProdutos(results) {
-    const listaProdutos = document.getElementById('lista-produtos');
+    const listaProdutos = document.getElementById('cards-container');
 
     results.forEach(produto => { // Use a lista de produtos fornecida como argumento
-        const divProduto = document.createElement('div');
-        divProduto.classList.add('produto');
+        const col = document.createElement('div');
+        col.classList.add('col-md-4');
 
-        const nomeProduto = document.createElement('h1');
-        nomeProduto.classList.add('text-primary', 'fs-2');
-        nomeProduto.textContent = produto.title;
+        const card = document.createElement('div');
+        card.classList.add('card');
 
-        const imagemProduto = document.createElement('img');
-        imagemProduto.src = produto.thumbnail;
-        imagemProduto.alt = 'Imagem do Produto';
+        const cardBody = document.createElement('div');
+        cardBody.classList.add('card-body');
 
-        divProduto.appendChild(nomeProduto);
-        divProduto.appendChild(imagemProduto);
+       
 
-        listaProdutos.appendChild(divProduto);
+        const imagem = document.createElement('img');
+        imagem.classList.add('card-img-top');
+        imagem.src = produto.thumbnail;
+        imagem.alt = 'Imagem do Produto';
+        imagem.width = 200; // Largura da imagem
+        imagem.height = 350; // Altura da imagem
+        //imagem.style.filter = 'brightness(90%)'; // Ajuste de brilho (exemplo: 80%)
+
+        const titulo = document.createElement('h5');
+        titulo.classList.add('card-title');
+        titulo.textContent = produto.title;
+
+        const descricao = document.createElement('p');
+        descricao.classList.add('card-text');
+        if(produto.shipping.free_shipping){
+            descricao.textContent = "Frete Grátis";
+        }
+        
+
+        const preco = document.createElement('p');
+        preco.classList.add('card-text');
+        preco.textContent = `Preço: ${produto.price}`;
+
+        const parcelamento = document.createElement('p');
+        preco.classList.add('card-text');
+        preco.textContent = `em ${produto.installments.quantity}x R$ ${produto.installments.amount}`;
+
+        cardBody.appendChild(titulo);
+        cardBody.appendChild(imagem);
+        cardBody.appendChild(descricao);
+        cardBody.appendChild(preco);
+        cardBody.appendChild(parcelamento);
+        card.appendChild(cardBody);
+        col.appendChild(card);
+
+        listaProdutos.appendChild(col);
 
         // Adiciona evento de clique para redirecionar para a página do produto
-        divProduto.addEventListener('click', () => {
+        card.addEventListener('click', () => {
             window.location.href = 'Tela_Produto.html?id=' + produto.id;
         });
     });

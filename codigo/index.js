@@ -76,7 +76,7 @@ const fs = require('fs');
 
 app.get('/getIten',async (req, res) =>{
     // Variaveis que vamos precisar enviar à API do MELI
-    const access_token = "APP_USR-6601762389710091-053109-86efbb14ff7d7de4bd4866d41b371824-174492932";
+    const access_token = "APP_USR-6601762389710091-053121-46dd71e02f297cad69cf6f39e878c0c3-174492932";
 
     
     const buscaDigitada = req.query.busca || "motorola"; // Busca o parâmetro de busca na query da URL
