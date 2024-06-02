@@ -6,7 +6,7 @@ function lerProduto() {
       .then(response => response.json())
       .then(data => {
           console.log('Dados do JSON:', data);
-          const produto = data.produtos.find(produto => produto.id == idProduto);
+          const produto = data.results.find(produto => produto.id == idProduto);
           if (produto) {
               console.log('Produto encontrado:', produto);
               preencherDetalhes(produto);
@@ -24,10 +24,10 @@ function preencherDetalhes(produto) {
     const descricaoProduto = document.getElementById('descricao-produto');
     const precoProduto = document.getElementById('preco-produto');
 
-    nomeProduto.textContent = produto.titulo;
-    imagemProduto.src = produto.imagem;
-    descricaoProduto.textContent = produto.descricao;
-    precoProduto.textContent = `R$ ${produto.preco}`;
+    nomeProduto.textContent = produto.title;
+    imagemProduto.src = produto.thumbnail;
+    descricaoProduto.textContent = produto.listing_type_id;
+    precoProduto.textContent = `R$ ${produto.price}`;
 }
 
 lerProduto();
