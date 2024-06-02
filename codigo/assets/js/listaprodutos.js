@@ -71,7 +71,12 @@ function preencherListaProdutos(results) {
 
                 const parcelamento = document.createElement('p');
                 parcelamento.classList.add('card-text');
-                parcelamento.textContent = `em ${produto.installments.quantity}x R$ ${produto.installments.amount}`;
+                if (produto.installments) {
+                    parcelamento.textContent = `em ${produto.installments.quantity ? produto.installments.quantity : ' '}x R$ 
+                    ${produto.installments.amount ? produto.installments.amount : ' '}`;
+                } else {
+                    parcelamento.textContent = '';
+                }
 
                 cardBody.appendChild(titulo);
                 cardBody.appendChild(imagem);
