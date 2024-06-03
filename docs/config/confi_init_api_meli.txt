@@ -1,0 +1,18 @@
+ID aplicativo: 6601762389710091
+Chave secreta: w7pWXJCPPR9swx7sbGThxOSQYeh891Qo
+URI de redirect: https://www.google.com.br
+CODE: TG-665884d8abb3b10001a2ec6a-174492932
+ACCESS TOKEN: APP_USR-6601762389710091-053009-b1d339f090ff857939badee844dc5a60-174492932
+REFRESHTOKEN: TG-665884faabb3b10001a2edd1-174492932
+
+//a partir do refreshtoken
+ACCESS TOKEN: APP_USR-6601762389710091-053010-98a094327540baf2151693a1e1934527-174492932
+REFRESHTOKEN: TG-6658894ccff56c00019ec1a6-174492932
+
+token_type: 'Bearer',
+  expires_in: 21600,
+  scope: 'offline_access read write',
+  user_id: 174492932,
+
+
+https://auth.mercadolivre.com.br/authorization?response_type=code&client_id=6601762389710091&redirect_uri=https://www.google.com.br

@@ -56,4 +56,10 @@ h1 {
 
 img {
     cursor: pointer;
+    
+    
+}
+#imagem-produto{
+    width: 200px;
+    height: 200px;
 }
