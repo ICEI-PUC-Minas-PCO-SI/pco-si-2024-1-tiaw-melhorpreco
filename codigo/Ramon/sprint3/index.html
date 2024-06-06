@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProdutoDestaque</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="logo1.png">
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Buscar">
+            <button type="submit">Buscar</button>
+        </div>
+        <div class="user-options">
+            <a href="#">Login</a> /<a href="#">Cadastro</a>
+        </div>
+    </header>
+
+    <h1>Produto em Destaque</h1>
+    <div class="gallery">
+        <div class="content">
+            <img src="s24.png">
+            <h3>Galaxy S24 Ultra</h3>
+            <p>Smartphone Samsung Galaxy S24 Ultra 6,8 Galaxy AI 512GB Titânio Cinza 5G 12GB RAM Câm. Quádrupla 200MP +
+                Selfie 12MP Bateria 5000mAh Dual Chip</p>
+            <h6>R$ 9.899,10</h6>
+            <ul id="stars">
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+            </ul>
+            <button class="buy" onclick="buyProduct()">Comprar</button>
+        </div>
+    </div>
+
+    <footer>
+        <p id="rodape">priceCheck - 2024. Todos os direitos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
