@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRICE CHECK</title>
+    <link rel="stylesheet" href="assets\css\style.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets\js\script.js"></script>
+    <style>
+       
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="assets\img\logo (1).png" >
+    </div>
+    <div class="search">
+        <select id="productDropdown">
+            <option value="">Selecione um produto</option>
+        </select>
+        <!--campo de entrada de pesquisa -->
+        <input type="text" id="searchInput" placeholder="Termo de pesquisa">
+        
+    </div>
+    <div class="user-options">
+        <a href="#">Login</a> / <a href="#">Cadastro</a>
+    </div>
+</header>
+<!-- botao para buscar o grafico -->
+<button id="searchButton" type="button">Buscar</button>
+<!-- Elemento para exibir o gráfico -->
+<div class="chart-container">
+    <canvas id="priceChart"></canvas>
+</div>
+
+<script>
+    // Dados para o histórico de preços
+    var productsData = [
+        {
+            nome: "Xbox Series S 500gb",
+            preços: [2499.99, 2699.99, 2564.90, 2298.91, 2257.11, 2421.06]
+        },
+        {
+            nome: "Playstation 5 825gb",
+            preços: [3749.00, 3799.00, 3989.00, 3799.00, 3639.90, 3437.67]
+        },
+        {
+            nome: "Tv 32'' Led LG Hd Smart",
+            preços: [1027.00, 1027.00, 1002.00, 1002.00, 1029.89, 999.90]
+        },
+        {
+            nome: "Fone de Ouvido Altomex A-607",
+            preços: [69.75, 67.50, 69.67, 69.67, 72.13, 71.99]
+        },
+        {
+            nome: "Switch Azul/vermelho 32gb",
+            preços: [2149.90, 2391.08, 2149.90, 2391.08, 1979.00, 1826.82]
+        },
+        {
+            nome: "Tom Clancy's Rainbow Six Siege",
+            preços: [39.90, 59.90, 59.90, 59.90, 59.90, 59.90]
+        },
+        
+    ];
+
+    // Preencher o dropdown de produtos
+    var productDropdown = document.getElementById('productDropdown');
+    productsData.forEach(function(product) {
+        var option = document.createElement('option');
+        option.value = product.nome; // corrigi aqui de product.name para product.nome
+        option.textContent = product.nome; // corrigi aqui de product.name para product.nome
+        productDropdown.appendChild(option);
+    });
+
+    // Configurações do gráfico
+    var chartOptions = {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    };
+
+    // Obter o contexto do canvas onde o gráfico será desenhado
+    var ctx = document.getElementById('priceChart').getContext('2d');
+
+    // Criar o gráfico de linha inicial com os dados do primeiro produto
+    var initialProductData = productsData[0];
+    var initialChartData = {
+        labels: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun"],
+        datasets: [{
+            label: "Preço",
+            data: Array(initialProductData.preços.length).fill(0), // Initialize with zeros
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            borderWidth: 1
+        }]
+    };
+
+    var priceChart = new Chart(ctx, {
+        type: 'line',
+        data: initialChartData,
+        options: chartOptions
+    });
+
+    // Função para atualizar o gráfico com base no produto selecionado
+    function updateChart(selectedProductName) {
+        var selectedProductData = productsData.find(function(product) {
+            return product.nome === selectedProductName;
+        });
+
+        var chartData = {
+            labels: ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun"],
+            datasets: [{
+                label: "Preço",
+                data: selectedProductData.preços,
+                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                borderColor: 'rgba(255, 99, 132, 1)',
+                borderWidth: 1
+            }]
+        };
+
+        // Atualizar o gráfico com os novos dados
+        priceChart.data = chartData;
+        priceChart.update();
+    }
+
+    // Adicionar um ouvinte de evento para o botão "Buscar"
+    document.getElementById('searchButton').addEventListener('click', function() {
+        var selectedProduct = productDropdown.value;
+        var searchTerm = document.getElementById('searchInput').value; // aqui estou obtendo o valor do campo de entrada de pesquisa
+
+        if (selectedProduct) {
+            updateChart(selectedProduct);
+        } else {
+            // Informar ao usuário que nenhum produto foi selecionado
+            alert("Por favor, selecione um produto.");
+            // Initialize chart with zeros
+            priceChart.data.datasets[0].data = Array(initialProductData.preços.length).fill(0);
+            priceChart.update();
+        }
+
+        // Mostrar o termo de pesquisa no console
+        console.log("Termo de pesquisa:", searchTerm);
+    });
+</script>
+
+</body>
+</html>
