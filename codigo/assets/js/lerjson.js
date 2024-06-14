@@ -23,7 +23,8 @@ function preencherDetalhes(produto) {
     const imagemProduto = document.getElementById('imagem-produto');
     const descricaoProduto = document.getElementById('descricao-produto');
     const precoProduto = document.getElementById('preco-produto');
-    const parcelamento = document.getElementById('parcelamento')
+    const parcelamento = document.getElementById('parcelamento');
+    const redirecionar = document.getElementById('redirecionar');
 
     // Extraindo as informações de BRAND e COLOR
     const brand = produto.attributes.find(attr => attr.id === 'BRAND');
@@ -57,6 +58,7 @@ function preencherDetalhes(produto) {
     } else {
         parcelamento.textContent = '';
     }
+    redirecionar.innerHTML = `<a href="${produto.permalink}">Revendedor</a>`;
 }
 
 lerProduto();
