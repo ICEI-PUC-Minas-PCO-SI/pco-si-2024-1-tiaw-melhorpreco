@@ -6,13 +6,13 @@ Para ser mais específico, o projeto fornece ao usuário a busca por nome, categ
 
 ## Alunos integrantes da equipe
 
-* João Pedro Gomes da Silva
-* Higor Antônio da Silva
-* Pedro Augusto Cruz de Almeida
 * Alex Mendes dos Santos
-* Ramon Pereira de Souza
+* Arthur Leandro Jacinto
+* Higor Antônio da Silva
+* João Pedro Gomes da Silva
+* Pedro Augusto Cruz de Almeida
 * Phillipi Garcia da Silveira
-* Arthur Leandro Jacinto 
+* Ramon Pereira de Souza
 
 ## Professores responsáveis
 
