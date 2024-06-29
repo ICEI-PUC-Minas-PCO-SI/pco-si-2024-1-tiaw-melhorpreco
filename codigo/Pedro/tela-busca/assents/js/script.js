@@ -1,25 +1,8 @@
-document.addEventListener('DOMContentLoaded', function() {
-  // JSON de exemplo com dados dos usuários
-  var dadosRecuperados = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
-    var usuario = JSON.stringify(dadosRecuperados);
-    console.log("Usuário logado:",usuario);
-    const user = document.getElementById('usuariologado');
-    user.textContent = JSON.stringify(dadosRecuperados.nome);
-
-     
-
-
-
-function toggleLike(icon) {
-  icon.querySelector('i').classList.toggle('bi-heart');
-  icon.querySelector('i').classList.toggle('bi-heart-fill');
-  icon.querySelector('i').classList.toggle('liked');
-}
 
 async function fetchProducts(query) {
-  const response = await fetch(`https://api.mercadolibre.com/sites/MLB/search?q=${query}&sort=price_asc`);
+  const response = await fetch(`https://api.mercadolibre.com/sites/MLB/search?q=${query}`);
   const data = await response.json();
-  return data.results.filter(product => product.condition === "new");
+  return data.results;
 }
 
 function createProductCard(product) {
@@ -51,4 +34,15 @@ document.getElementById('searchButton').addEventListener('click', async function
     const card = createProductCard(product);
     productContainer.appendChild(card);
   });
-})});
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  // JSON de exemplo com dados dos usuários
+  var dadosRecuperados = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
+    var usuario = JSON.stringify(dadosRecuperados);
+    console.log("Usuário logado:",usuario);
+    const user = document.getElementById('usuariologado');
+    user.textContent = JSON.stringify(dadosRecuperados.nome);
+});
+     
+

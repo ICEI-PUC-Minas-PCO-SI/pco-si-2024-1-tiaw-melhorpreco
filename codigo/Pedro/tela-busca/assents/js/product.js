@@ -90,25 +90,6 @@ async function fetchProductDetails(productId) {
       return data;
     }
 
-    function displayProductReviews(reviews) {
-      const reviewsContainer = document.getElementById('reviewsContainer');
-      if (reviews.reviews.length === 0) {
-        reviewsContainer.innerHTML = '<p>Este produto ainda não possui avaliações.</p>';
-      } else {
-        reviewsContainer.innerHTML = reviews.reviews.map(review => `
-          <div class="review">
-            <strong>${review.title}</strong>
-            <p>${review.content}</p>
-            <div class="review-rating">
-              ${'★'.repeat(review.rating)}${'☆'.repeat(5 - review.rating)}
-            </div>
-            <p><small>Por ${review.reviewer.name} em ${new Date(review.date).toLocaleDateString()}</small></p>
-            <hr>
-          </div>
-        `).join('');
-      }
-    }
-
     document.addEventListener('DOMContentLoaded', async () => {
       const urlParams = new URLSearchParams(window.location.search);
       const productId = urlParams.get('id');
@@ -122,6 +103,7 @@ async function fetchProductDetails(productId) {
         displayProductReviews(reviews);
       }
     });
+
 
     async function fetchRelatedProducts(categoryId) {
       try {
@@ -199,9 +181,7 @@ async function fetchProductDetails(productId) {
       const productId = urlParams.get('id'); // Obtém o ID do produto da URL
     
       if (productId) {
- 
         const categoryId = await fetchProductCategoryId(productId);
-  
         if (categoryId) {
           fetchRelatedProducts(categoryId); // Chama a função para buscar produtos relacionados
         } else {
@@ -222,4 +202,4 @@ async function fetchProductDetails(productId) {
       }
     }
     
-    
+        
