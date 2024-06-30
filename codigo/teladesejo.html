@@ -12,29 +12,34 @@
 </head>
 
 <body>
-  <nav class="navbar">
-    <div class="logo">
-      <a href="/codigo/telamain.html"><img src="/codigo/assents/image/logo.png" alt="Logo"></a>
-    </div>
-    <div class="search-container">
-      <input type="text" id="searchInput" placeholder="Pesquisar produtos ou categorias..." required>
-      <button id="searchButton"><i class="bi bi-search"></i></button>
-    </div>
-    <div class="icons">
-      <button id="alertButton" class="btn-alert">
+<!-- Navbar existente -->
+<nav class="navbar">
+  <div class="logo">
+    <a href="/codigo/telamain.html"><img src="/codigo/assents/image/logo.png" alt="Logo"></a>
+  </div>
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Pesquisar produtos ou categorias..." required>
+    <button id="searchButton"><i class="bi bi-search"><a href=""></a></i></button>
+  </div>
+  <div class="icons">
+    <a href="/codigo/teladesejo.html">
+      <button id="alertButton" class="btn-alert">   
         <i class="bi bi-box2-heart"></i>
         <span>Lista de Desejos</span>
-      </button>
-      <a class="entrar" id="loginBtn" href="/codigo/login.html">
-        <i class="bi bi-person"></i>
-        <div>
-          <strong>Entrar</strong><br>
-          <small></small>
-        </div>
-      </a>
-      <div id="usuariologado"></div>
-    </div>
-  </nav>
+      </button></a>
+    <a class="entrar" id="loginBtn">
+      <i class="bi bi-person"></i>
+      <div>
+        <strong id="usuariologado">Entrar</strong><br>
+        
+        <small></small>
+      </div>
+    </a>
+  </div>
+</nav>
+
+
+
 
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
@@ -42,6 +47,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
   <script src="/codigo/assents/js/search.js"></script>
+  <script src="/codigo/assents/js/teladesejo.js"></script>
 
 </body>
 

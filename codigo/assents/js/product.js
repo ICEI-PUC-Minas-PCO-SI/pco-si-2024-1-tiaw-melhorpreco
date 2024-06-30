@@ -392,5 +392,3 @@ async function fetchProductDetails(productId) {
     usuarioCorrente = {};
     sessionStorage.setItem('usuarioCorrente', JSON.stringify(usuarioCorrente));
   }
-
-  
