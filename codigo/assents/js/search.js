@@ -64,3 +64,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
     performSearch();
 });
+document.addEventListener('DOMContentLoaded', function () {
+    var dadosRecuperados = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
+  
+    const user = document.getElementById('usuariologado');
+  
+    if (dadosRecuperados && dadosRecuperados.nome) {
+      console.log("Usuário logado:", JSON.stringify(dadosRecuperados));
+      user.textContent = dadosRecuperados.nome; // Atualiza o nome do usuário logado
+    } else {
+      user.textContent = "Entrar"; // Atualiza o nome do usuário logado
+    }
+  
+    user.addEventListener('click', function () {
+      if (dadosRecuperados && dadosRecuperados.nome) {
+        logoutUser(); // Função que realiza o logout
+        window.location.href = 'telamain.html'; // Redireciona para a tela principal após o logout
+      } else {
+        window.location.href = 'login.html'; // Redireciona para a tela de login se não estiver logado
+      }
+    });
+  });
+  
+  // Função de logout do usuário
+  function logoutUser() {
+    usuarioCorrente = {};
+    sessionStorage.setItem('usuarioCorrente', JSON.stringify(usuarioCorrente));
+  }

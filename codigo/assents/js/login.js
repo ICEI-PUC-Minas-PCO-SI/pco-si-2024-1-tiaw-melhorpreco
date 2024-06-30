@@ -1,4 +1,4 @@
-const LOGIN_URL = "index.html"; // Atualize para o novo caminho da página de login
+const LOGIN_URL = "telamain.html"; // Atualize para o novo caminho da página de login
 
 // Objeto para o banco de dados de usuários baseado em JSON
 var db_usuarios = {};
@@ -77,8 +77,16 @@ function processaFormLogin(form) {
     var loginSuccess = loginUser(username, password);
 
     if (loginSuccess) {
-        alert('Login bem-sucedido! Redirecionando...');
-        window.location.href = 'painel.html';
+        var dadosRecuperados = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
+        if (dadosRecuperados.login === 'admin') {
+            alert('Login bem-sucedido! Redirecionando...');
+            window.location.href = '/codigo/painel.html';
+        } else {
+            alert('Login bem-sucedido! Redirecionando...');
+            window.location.href = '/codigo/telamain.html';
+        }
+        
+       
     } else {
         alert('Usuário ou senha incorretos.');
     }
