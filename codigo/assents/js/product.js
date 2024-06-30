@@ -271,3 +271,50 @@ async function fetchProductDetails(productId) {
       const user = document.getElementById('usuariologado');
       user.textContent = JSON.stringify(dadosRecuperados.nome);
   });
+
+  $(document).ready(function(){
+    $('#commentForm').on('submit', function(event) {
+      event.preventDefault();
+
+      // Obter os valores dos campos
+      var commentText = $('#comment').val();
+      var rating = $('input[name="rating"]:checked').val();
+
+      // Validar se o usuário selecionou uma avaliação
+      if (!rating) {
+        alert('Por favor, selecione uma avaliação.');
+        return;
+      }
+
+      // Criar o elemento de comentário
+      var commentHtml = `
+        <div class="card mt-3">
+          <div class="card-body">
+            <p class="card-text comment-text">${commentText}</p>
+            <div class="static-star-rating">
+              ${getStaticStarHtml(rating)}
+            </div>
+          </div>
+        </div>
+      `;
+
+      // Adicionar o comentário à seção de comentários
+      $('#commentsSection').prepend(commentHtml);
+
+      // Limpar o formulário
+      $('#commentForm')[0].reset();
+    });
+
+    // Função para gerar o HTML das estrelas estáticas
+    function getStaticStarHtml(rating) {
+      var starHtml = '';
+      for (var i = 1; i <= 5; i++) {
+        if (i <= rating) {
+          starHtml += '<span class="static-star checked">&#9733;</span>';
+        } else {
+          starHtml += '<span class="static-star">&#9733;</span>';
+        }
+      }
+      return starHtml;
+    }
+  });
