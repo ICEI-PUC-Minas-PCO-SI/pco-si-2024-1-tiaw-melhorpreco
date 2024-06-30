@@ -440,3 +440,52 @@ body {
     color: #5bc0de;
   }
   
+  .carousel-inner img {
+    width: 100%;
+    height: auto;
+  }
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin: 10px;
+  }
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  .card img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    max-width: 100%;
+    height: auto;
+  }
+  .card-body {
+    padding: 10px;
+  }
+  .card-title {
+    font-size: 1.25em;
+    margin-bottom: 10px;
+  }
+  .card-text {
+    font-size: 1em;
+    margin-bottom: 10px;
+  }
+  .card button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .card button:hover {
+    background-color: #0056b3;
+  }
