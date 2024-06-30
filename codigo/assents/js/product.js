@@ -263,4 +263,11 @@ async function fetchProductDetails(productId) {
       performSearch();
   });
   
-  
+  document.addEventListener('DOMContentLoaded', function() {
+    // JSON de exemplo com dados dos usuários
+    var dadosRecuperados = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
+      var usuario = JSON.stringify(dadosRecuperados);
+      console.log("Usuário logado:",usuario);
+      const user = document.getElementById('usuariologado');
+      user.textContent = JSON.stringify(dadosRecuperados.nome);
+  });
