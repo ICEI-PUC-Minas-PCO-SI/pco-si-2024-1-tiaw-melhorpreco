@@ -54,9 +54,6 @@ function createProductCard(product) {
   card.className = 'col-md-4';
   card.innerHTML = `
       <div class="product-card" onclick="location.href='product.html?id=${product.id}'">
-          <div class="icons" onclick="event.stopPropagation(); toggleLike(this)">
-              <i class="bi bi-heart"></i>
-          </div>
           <img class="card-img-top" src="${product.thumbnail.replace('I.jpg', 'B.jpg')}" alt="${product.title}">
           <div class="card-body">
               <h5 class="card-title">${product.title}</h5>
