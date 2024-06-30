@@ -1,65 +1,44 @@
-<<<<<<< HEAD
-cff-version: 1.0.1
-message: Please cite this software using these metadata.
-title: 
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: PriceCheck
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
 authors:
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names:
-  - name-suffix: Professor
+  - given-names: Alex
+    family-names: Mendes
+  - given-names: Arthur
+    family-names: Leandro
+  - given-names: Higor
+    family-names: Antônio
+  - given-names: 'João '
+    family-names: Pedro
+  - given-names: Pedro
+    family-names: Augusto
+  - given-names: 'Phillipi '
+    family-names: Garcia
+  - given-names: Ramon
+    family-names: Pereira
+  - given-names: Amália
+    family-names: Soares
+    name-suffix: Professora
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
-  - name-suffix: Professor
+  - given-names: Leonardo
+    family-names: Vilela
+    name-suffix: Professor
     affiliation: PUC Minas
-    family-names: 
-    given-names: 
+repository-code: >-
+  https://github.com/ICEI-PUC-Minas-PCO-SI/pco-si-2024-1-tiaw-melhorpreco/tree/master
+abstract: >-
+  O nosso site tem como principal objetivo oferecer aos
+  consumidores uma maneira simplificada de encontrar
+  produtos com os menores preços disponíveis no mercado
+  online.
 keywords:
-  - 
-  - 
-repository-code: 
+  - Busca por menores preços
 license: CC-BY-4.0
 version: 1.0.0
-date-released: 2022-07-14
-=======
-cff-version: 1.0.1
-message: Please cite this software using these metadata.
-title: 
-authors:
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names: 
-  - family-names: 
-    given-names:
-  - name-suffix: Professor
-    affiliation: PUC Minas
-    family-names: 
-    given-names: 
-  - name-suffix: Professor
-    affiliation: PUC Minas
-    family-names: 
-    given-names: 
-keywords:
-  - 
-  - 
-repository-code: 
-license: CC-BY-4.0
-version: 1.0.0
-date-released: 2022-07-14
->>>>>>> 576e4073eb686b7caee5801aac8f95491eb4d605
+date-released: '2024-07-04'
