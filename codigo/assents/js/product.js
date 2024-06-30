@@ -287,7 +287,7 @@ async function fetchProductDetails(productId) {
         var commentHtml = `
             <div class="card mt-3">
                 <div class="card-body">
-                    <h5 class="card-title">${comment.userName}</h5>
+                    <h5 class="card-title text-left">${comment.userName}</h5>
                     <p class="card-text comment-text">${comment.commentText}</p>
                     <div class="static-star-rating">
                         ${getStaticStarHtml(comment.rating)}
