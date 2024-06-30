@@ -272,49 +272,94 @@ async function fetchProductDetails(productId) {
       user.textContent = JSON.stringify(dadosRecuperados.nome);
   });
 
-  $(document).ready(function(){
-    $('#commentForm').on('submit', function(event) {
-      event.preventDefault();
+  $(document).ready(function() {
+    // Função para carregar comentários do localStorage
+    function loadComments(productId) {
+        var allComments = JSON.parse(localStorage.getItem('productComments')) || [];
+        var productComments = allComments.filter(comment => comment.productId === productId);
+        productComments.forEach(function(comment) {
+            displayComment(comment);
+        });
+    }
 
-      // Obter os valores dos campos
-      var commentText = $('#comment').val();
-      var rating = $('input[name="rating"]:checked').val();
-
-      // Validar se o usuário selecionou uma avaliação
-      if (!rating) {
-        alert('Por favor, selecione uma avaliação.');
-        return;
-      }
-
-      // Criar o elemento de comentário
-      var commentHtml = `
-        <div class="card mt-3">
-          <div class="card-body">
-            <p class="card-text comment-text">${commentText}</p>
-            <div class="static-star-rating">
-              ${getStaticStarHtml(rating)}
+    // Função para exibir um comentário
+    function displayComment(comment) {
+        var commentHtml = `
+            <div class="card mt-3">
+                <div class="card-body">
+                    <h5 class="card-title">${comment.userName}</h5>
+                    <p class="card-text comment-text">${comment.commentText}</p>
+                    <div class="static-star-rating">
+                        ${getStaticStarHtml(comment.rating)}
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      `;
+        `;
+        $('#commentsSection').prepend(commentHtml);
+    }
 
-      // Adicionar o comentário à seção de comentários
-      $('#commentsSection').prepend(commentHtml);
+    // Função para obter o ID do produto atual
+    function getProductId() {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get('id');  // Supondo que o ID do produto é passado como parâmetro na URL
+    }
 
-      // Limpar o formulário
-      $('#commentForm')[0].reset();
+    // Carregar comentários ao iniciar a página
+    var currentProductId = getProductId();
+    loadComments(currentProductId);
+
+    $('#commentForm').on('submit', function(event) {
+        event.preventDefault();
+
+        // Verifica se o usuário está logado
+        var dadosRecuperados = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
+        if (!dadosRecuperados || !dadosRecuperados.login) {
+            alert('Você precisa estar logado para comentar.');
+            window.location.href = LOGIN_URL; // Redireciona para a página de login
+            return;
+        }
+
+        // Obter os valores dos campos
+        var commentText = $('#comment').val();
+        var rating = $('input[name="rating"]:checked').val();
+        var userName = dadosRecuperados.nome;
+
+        // Validar se o usuário selecionou uma avaliação
+        if (!rating) {
+            alert('Por favor, selecione uma avaliação.');
+            return;
+        }
+
+        // Criar o objeto de comentário
+        var comment = {
+            productId: currentProductId,
+            userName: userName,
+            commentText: commentText,
+            rating: rating
+        };
+
+        // Salvar o comentário no localStorage
+        var allComments = JSON.parse(localStorage.getItem('productComments')) || [];
+        allComments.push(comment);
+        localStorage.setItem('productComments', JSON.stringify(allComments));
+
+        // Exibir o comentário
+        displayComment(comment);
+
+        // Limpar o formulário
+        $('#commentForm')[0].reset();
     });
 
     // Função para gerar o HTML das estrelas estáticas
     function getStaticStarHtml(rating) {
-      var starHtml = '';
-      for (var i = 1; i <= 5; i++) {
-        if (i <= rating) {
-          starHtml += '<span class="static-star checked">&#9733;</span>';
-        } else {
-          starHtml += '<span class="static-star">&#9733;</span>';
+        var starHtml = '';
+        for (var i = 1; i <= 5; i++) {
+            if (i <= rating) {
+                starHtml += '<span class="static-star checked">&#9733;</span>';
+            } else {
+                starHtml += '<span class="static-star">&#9733;</span>';
+            }
         }
-      }
-      return starHtml;
+        return starHtml;
     }
-  });
+});
