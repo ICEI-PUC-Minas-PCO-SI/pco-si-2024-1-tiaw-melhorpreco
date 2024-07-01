@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhes do Produto</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/codigo/assents/css/product.css">
+  <link rel="icon" href="/codigo/assents/image/logo2.png" type="image/png">
+</head>
+
+<body>
+  <!-- Navbar existente -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="/codigo/telamain.html"><img src="/codigo/assents/image/logo.png" alt="Logo"></a>
+    </div>
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Pesquisar produtos ou categorias..." required>
+      <button id="searchButton"><i class="bi bi-search"><a href=""></a></i></button>
+    </div>
+    <div class="icons">
+      <a href="/codigo/teladesejo.html">
+      <button id="alertButton" class="btn-alert">   
+        <i class="bi bi-box2-heart"></i>
+        <span>Lista de Desejos</span>
+      </button></a>
+      <a class="entrar" id="loginBtn">
+        <i class="bi bi-person"></i>
+        <div>
+          <strong id="usuariologado">Entrar</strong><br>
+          
+          <small></small>
+        </div>
+      </a>
+    </div>
+  </nav>
+
+  <div class="container product-details mt-5">
+    <div class="product-image-carousel">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner zoom" id="carouselInner">
+          <!-- Imagens do carrossel serão adicionadas aqui dinamicamente -->
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <div class="carousel-thumbnails mt-3 d-flex justify-content-center" id="carouselThumbnails">
+        <!-- Miniaturas do carrossel serão adicionadas aqui dinamicamente -->
+      </div>
+    </div>
+    <div class="product-info">
+      <h1 id="productTitle"></h1>
+      <div class="price" id="productPrice"></div>
+      <div class="installments" id="productInstallments"></div>
+      <div class="free-shipping" id="productShipping"></div>
+      <a id="buyButton" class="btn btn-primary mt-3" href="#" target="_blank">Comprar agora</a>
+      <br>
+      <button id="addToWishlistButton" class="btn btn-primary mt-3">Adicionar a lista de desejos</button>
+      <h4 class="mt-4">Especificações Técnicas</h4>
+      <div class="accordion" id="specificationsAccordion">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                Ver Especificações Técnicas
+              </button>
+            </h5>
+          </div>
+          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#specificationsAccordion">
+            <div class="card-body">
+              <table class="specification-table" id="specificationTable">
+                <!-- Especificações técnicas serão adicionadas aqui dinamicamente -->
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container product-description mt-5">
+    <h3>Descrição do Produto</h3>
+    <p id="productDescription"></p>
+  </div>
+
+        <!-- Carrossel de produtos relacionados -->
+        <div class="container mt-5">
+          <div class="carousel-container">
+              <h2>Produtos Relacionados</h2>
+              <div id="relatedProductCarousel" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                      <!-- Produtos relacionados aqui -->
+                  </div>
+                  <a class="carousel-control-prev" href="#relatedProductCarousel" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#relatedProductCarousel" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                  </a>
+              </div>
+          </div>
+      </div>
+
+      <div class="container mt-5">
+        <h2>Seção de Comentários</h2>
+        <div class="form-section">
+          <form id="commentForm">
+            <div class="form-group">
+              <label for="comment">Comentário:</label>
+              <textarea class="form-control" id="comment" rows="3" required></textarea>
+            </div>
+            <div class="form-group d-flex align-items-center">
+              <label class="mr-3">Avaliação:</label>
+              <div class="star-rating">
+                <input type="radio" id="5-stars" name="rating" value="5" />
+                <label for="5-stars" class="star">&#9733;</label>
+                <input type="radio" id="4-stars" name="rating" value="4" />
+                <label for="4-stars" class="star">&#9733;</label>
+                <input type="radio" id="3-stars" name="rating" value="3" />
+                <label for="3-stars" class="star">&#9733;</label>
+                <input type="radio" id="2-stars" name="rating" value="2" />
+                <label for="2-stars" class="star">&#9733;</label>
+                <input type="radio" id="1-stars" name="rating" value="1" />
+                <label for="1-stars" class="star">&#9733;</label>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+        </div>
+        <div id="commentsSection" class="comments-section">
+          <!-- Comentários serão adicionados aqui -->
+        </div>
+      </div>
+      <footer class="bg-warning py-3 mt-5 w-100">
+        <div class="container text-center">
+            <p class="mb-0 text-white">© 2024 Price Check. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="/codigo/assents/js/product.js"></script>
+  <script src="/codigo/assents/js/script.js"></script>
+  <script src="/codigo/assents/js/search.js"></script>
+
+  <script>
+    
+  </script>
+
+</body>
+
+</html>
