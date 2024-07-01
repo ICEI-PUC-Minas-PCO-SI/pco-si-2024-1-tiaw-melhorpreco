@@ -85,7 +85,7 @@ async function fetchProductDetails(productId) {
       }
     });
     async function fetchProductReviews(productId) {
-      const response = await fetch(`https://api.mercadolibre.com/reviews/item/${productId}`);
+      const response = await fetch(`https://api.mercadolibre.com/item/${productId}`);
       const data = await response.json();
       return data;
     }
@@ -392,3 +392,46 @@ async function fetchProductDetails(productId) {
     usuarioCorrente = {};
     sessionStorage.setItem('usuarioCorrente', JSON.stringify(usuarioCorrente));
   }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const addToWishlistButton = document.getElementById('addToWishlistButton');
+  
+    addToWishlistButton.addEventListener('click', function() {
+      event.stopPropagation();
+  
+      var dadosRecuperados = JSON.parse(sessionStorage.getItem('usuarioCorrente'));
+  
+      if (!dadosRecuperados || !dadosRecuperados.id) {
+        window.location.href = 'login.html';
+        return;
+      }
+  
+      var userId = dadosRecuperados.id;
+      var productId = getProductIdFromPage(); // Função que recupera o ID do produto atual da página
+  
+      var userWishes = JSON.parse(localStorage.getItem('userWishes')) || {};
+  
+      if (!userWishes[userId]) {
+        userWishes[userId] = [];
+      }
+  
+      const index = userWishes[userId].indexOf(productId);
+  
+      if (index !== -1) {
+        userWishes[userId].splice(index, 1);
+        alert('Produto removido da lista de desejos.');
+      } else {
+        userWishes[userId].push(productId);
+        alert('Produto adicionado à lista de desejos.');
+      }
+  
+      localStorage.setItem('userWishes', JSON.stringify(userWishes));
+    });
+  });
+  
+  function getProductIdFromPage() {
+    const urlParams = new URLSearchParams(window.location.search);
+      const productId = urlParams.get('id');
+    return productId;
+  }
+  
