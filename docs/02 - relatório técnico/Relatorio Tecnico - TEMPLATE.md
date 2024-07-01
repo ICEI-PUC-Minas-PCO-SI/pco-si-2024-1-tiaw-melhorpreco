@@ -173,8 +173,6 @@ Pedro Augusto: Organização da equipe e divisão de papéis, Quadro de controle
 
 ......  COLOQUE AQUI O SEU TEXTO ......
 
-# **############## SPRINT 1 ACABA AQUI #############**
-
 # Projeto da Solução
 
 ......  COLOQUE AQUI O SEU TEXTO ......
