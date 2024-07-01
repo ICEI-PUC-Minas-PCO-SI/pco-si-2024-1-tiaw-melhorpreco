@@ -2,27 +2,21 @@
 # Informações do Projeto
 `TÍTULO DO PROJETO`  
 
-......  MELHOR PREÇO ......
+......  Price Check ......
 
 `CURSO` 
 
-......  SISTEMAS DE INFORMAÇÃO ......
+......  Análise e Desenvolvimento de Sistemas ......
 
 ## Participantes
 
-......  * João Pedro Gomes da Silva
+......  * Alex Mendes dos Santos
+* Arthur Leandro Jacinto
 * Higor Antônio da Silva
+* João Pedro Gomes da Silva
 * Pedro Augusto Cruz de Almeida
-* Alex Mendes dos Santos
-* Ramon Pereira de Souza
 * Phillipi Garcia da Silveira
-* Arthur Leandro Jacinto  ......
-
-> Inclua a lista dos membros da equipe com seus nomes completos.
->
-> Os membros do grupo são: 
-> - Fulano da Silva
-> - Ciclano Albuquerque
+* Ramon Pereira de Souza  ......
 
 # Estrutura do Documento
 
