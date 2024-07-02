@@ -21,4 +21,4 @@ Para ser mais específico, o projeto fornece ao usuário a busca por nome, categ
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+Link do deploy para testar o site: https://sitepricecheck.vercel.app/
