@@ -32,6 +32,7 @@ authors:
     affiliation: PUC Minas
 repository-code: >-
   https://github.com/ICEI-PUC-Minas-PCO-SI/pco-si-2024-1-tiaw-melhorpreco/tree/master
+Link do deploy para testar o site: https://sitepricecheck.vercel.app/
 abstract: >-
   O nosso site tem como principal objetivo oferecer aos
   consumidores uma maneira simplificada de encontrar
