@@ -1,5 +1,9 @@
 # Código do Projeto
 
-Mantenha neste diretório todo o código fonte do projeto. 
+### Estruturação das pastas
 
-Se necessário, descreva neste arquivo aspectos relevantes da estrutura de diretórios criada para organização do código.
+* /assets - contém os arquivos estáticos da página
+  - /css - contém os arquivos CSS para estilizar a página;
+  - /image - contém as imagens utilizadas no site;
+  - /js - contém os arquivos JavaScript para realizar determinadas funções no site.
+* -> restante dos arquivos "html" e "json"
