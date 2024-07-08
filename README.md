@@ -16,7 +16,7 @@ Para ser mais específico, o projeto fornece ao usuário a busca por nome, categ
 
 ## Professores responsáveis
 
-* Amália Soares Vilela de Vasconcelos
+* Amália Soares Vieira de Vasconcelos
 * Leonardo Vilela Cardoso
 
 ## Instruções de utilização
